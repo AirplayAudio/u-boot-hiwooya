@@ -536,7 +536,7 @@ static int init_func_ram (void)
 static int display_banner(void)
 {
    
-	printf ("\n\nWooya by wuya,V1.0.6\n\n");
+	printf ("\n\n www.chaostron.com  V1.0.6\n\n");
 	return (0);
 }
 
@@ -2870,7 +2870,7 @@ void disable_pcie(void)
 void gpio_init(void)
 {
 	u32 val;
-	printf( "MT7688 wifi module: www.hi-wooya.com\n" );
+	printf( "MT7688 wifi module: www.chaostron.com\n" );
 	//set gpio2_mode 1:0=2b01 wled,p1,p2,p3,p4 is gpio.p0 is ephy
 	val = 0x551;
 	RALINK_REG(RT2880_SYS_CNTL_BASE+0x64)=val;
