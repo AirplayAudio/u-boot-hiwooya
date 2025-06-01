@@ -8,6 +8,12 @@
 
 #Note
 * note:compile need java such as 1.7.0_79
+yum install java-1.8.0-openjdk -y
+or
+apt-get install java-1.8.0-openjdk -y
+
+*Please modify the file path of buildroot-gcc342 in the Makefile and config.in to match your own path.
+/root/uboot-76x8/u-boot-hiwooya/buildroot-gcc342/bin
 
 #update list
 * change bps to 115200,fix gpio39,40,41,42 low when startup

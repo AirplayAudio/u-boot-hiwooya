@@ -47,7 +47,7 @@ export	TOPDIR
 ifeq ($(MT7621_MP), y)
 CONFIG_CROSS_COMPILER_PATH ?= /opt/mips-2012.03/bin/
 else
-CONFIG_CROSS_COMPILER_PATH ?= /opt/buildroot-gcc342/bin
+CONFIG_CROSS_COMPILER_PATH ?= /root/uboot-76x8/u-boot-hiwooya/buildroot-gcc342/bin
 endif
 
 ifeq (include/config.mk,$(wildcard include/config.mk))
@@ -354,6 +354,7 @@ u-boot.dis:	u-boot
 #		$(LD) $(LDFLAGS) $$UNDEF_SYM $(OBJS) \
 #			--start-group $(LIBS) --end-group -L $(shell dirname) $(CC) $(CFLAGS) -print-libgcc-file-name -lgcc \
 #			-Map u-boot.map -o u-boot 
+
 			
 u-boot:		depend $(SUBDIRS) $(OBJS) $(LIBS) $(LDSCRIPT)
 		UNDEF_SYM=`$(OBJDUMP) -x $(LIBS) |sed  -n -e 's/.*\(__u_boot_cmd_.*\)/-u\1/p'|sort|uniq`;\
